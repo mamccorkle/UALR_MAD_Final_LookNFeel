@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="seats_array">
+        <item>Seat  1</item>
+        <item>Seat  2</item>
+        <item>Seat  3</item>
+        <item>Seat  4</item>
+        <item>Seat  5</item>
+        <item>Seat  6</item>
+        <item>Seat  7</item>
+        <item>Seat  8</item>
+        <item>Seat  9</item>
+        <item>Seat 10</item>
+        <item>Seat 11</item>
+        <item>Seat 12</item>
+        <item>Seat 13</item>
+        <item>Seat 14</item>
+        <item>Seat 15</item>
+    </string-array>
+</resources>

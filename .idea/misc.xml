@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/shape_rectangle_highlight.xml" value="0.418" />
+        <entry key="app/src/main/res/drawable/shape_rectangle_highlight_red.xml" value="0.418" />
         <entry key="app/src/main/res/layout/acitvity_register.xml" value="0.379981884057971" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.379981884057971" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.2884963768115942" />
@@ -11,8 +13,12 @@
         <entry key="app/src/main/res/layout/activity_movie_selection.xml" value="0.379981884057971" />
         <entry key="app/src/main/res/layout/activity_payment.xml" value="0.379981884057971" />
         <entry key="app/src/main/res/layout/activity_seating_chart.xml" value="0.379981884057971" />
+        <entry key="app/src/main/res/layout/activity_seating_chart_v2.xml" value="0.384963768115942" />
+        <entry key="app/src/main/res/layout/activity_seating_chart_v3.xml" value="0.384963768115942" />
         <entry key="app/src/main/res/layout/activity_theater_selection.xml" value="0.379981884057971" />
         <entry key="app/src/main/res/layout/activity_theater_selection_v2.xml" value="0.379981884057971" />
+        <entry key="app/src/main/res/layout/activity_theater_selection_v3.xml" value="0.379981884057971" />
+        <entry key="app/src/main/res/layout/activity_theater_selection_v4.xml" value="0.379981884057971" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.3890625" />
       </map>
     </option>
