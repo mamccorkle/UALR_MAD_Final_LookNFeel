@@ -6,6 +6,16 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/tvScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="screen"
+        app:layout_constraintBottom_toTopOf="@+id/ivScreen"
+        app:layout_constraintEnd_toEndOf="@+id/ivScreen"
+        app:layout_constraintStart_toStartOf="@+id/ivScreen" />
+
+    <TextView
         android:id="@+id/tvSelectSeat2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,6 +39,7 @@
         android:layout_height="wrap_content"
         android:enabled="false"
         android:text="H - Handicap"
+        android:textColor="#4FB1CB"
         app:layout_constraintStart_toStartOf="@+id/ivScreen"
         app:layout_constraintTop_toBottomOf="@+id/ivScreen" />
 
@@ -188,17 +199,17 @@
         android:id="@+id/ivHandicapHighlight"
         android:layout_width="272dp"
         android:layout_height="51dp"
-        app:layout_constraintBottom_toTopOf="@+id/tbSeat9"
+        app:layout_constraintBottom_toBottomOf="@+id/tbSeat12"
         app:layout_constraintEnd_toEndOf="@+id/tbSeat6"
         app:layout_constraintStart_toStartOf="@+id/tbSeat1"
-        app:layout_constraintTop_toBottomOf="@+id/tvRecliningSeats"
+        app:layout_constraintTop_toTopOf="@+id/tbSeat12"
         app:srcCompat="@drawable/shape_rectangle_highlight_blue" />
 
     <ToggleButton
         android:id="@+id/tbSeat12"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:enabled="false"
         android:textOff="12"
         android:textOn="12"
@@ -246,24 +257,27 @@
     <Spinner
         android:id="@+id/seatSpinner"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
+        android:background="@drawable/shape_spinner_outline"
+        android:popupBackground="#f0DFDFE0"
         android:spinnerMode="dropdown"
         app:layout_constraintBottom_toTopOf="@+id/btnProceed"
         app:layout_constraintEnd_toEndOf="@+id/tbSeat11"
         app:layout_constraintStart_toStartOf="@+id/tbSeat7"
-        app:layout_constraintTop_toBottomOf="@+id/tbSeat1" />
+        app:layout_constraintTop_toBottomOf="@+id/tbSeat1"
+        app:layout_constraintVertical_bias="0.42000002" />
 
     <ImageView
         android:id="@+id/ivScreen"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="96dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/seating_chart_screen" />
+        app:srcCompat="@drawable/seating_chart_screen_v2" />
 
     <TextView
         android:id="@+id/tvRecliningSeats"
@@ -271,6 +285,7 @@
         android:layout_height="wrap_content"
         android:enabled="false"
         android:text="R - Reclining Seats"
+        android:textColor="#FF7AB2"
         app:layout_constraintEnd_toEndOf="@+id/ivScreen"
         app:layout_constraintTop_toBottomOf="@+id/ivScreen" />
 
