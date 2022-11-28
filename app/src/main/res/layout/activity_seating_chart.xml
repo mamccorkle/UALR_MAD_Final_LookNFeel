@@ -9,12 +9,12 @@
         android:id="@+id/imageView3"
         android:layout_width="413dp"
         android:layout_height="736dp"
-        app:srcCompat="@drawable/seatingchart"
+        app:srcCompat="@drawable/screen_shot_2022_10_28_at_1_48_10_pm"
         tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="-72dp" />
+        tools:layout_editor_absoluteY="-69dp" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnProceed"
         android:layout_width="300dp"
         android:layout_height="54dp"
         android:layout_marginBottom="64dp"
@@ -25,11 +25,11 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView23"
+        android:id="@+id/tvSelectSeat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Please select the desired seat"
-        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintBottom_toTopOf="@+id/btnProceed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
