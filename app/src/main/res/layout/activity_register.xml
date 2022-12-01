@@ -58,9 +58,11 @@
         app:layout_constraintVertical_bias="0.050000012">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/email_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Your Email" />
+            android:hint="Your Email"
+            android:inputType="textEmailAddress"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -76,9 +78,11 @@
         app:layout_constraintVertical_bias="0.050000012">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/password_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Password" />
+            android:hint="Password"
+            android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -94,13 +98,15 @@
         app:layout_constraintVertical_bias="0.050000012">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/confirm_password_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Re-Type Password" />
+            android:hint="Re-Type Password"
+            android:inputType="textPassword"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/create_account_btn"
         android:layout_width="300dp"
         android:layout_height="54dp"
         android:layout_marginTop="32dp"
@@ -112,5 +118,37 @@
         app:layout_constraintStart_toStartOf="@+id/textInputLayout2"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
         app:layout_constraintVertical_bias="0.029" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/create_account_btn"
+        tools:layout_editor_absoluteX="68dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already have an account? " />
+
+        <TextView
+            android:id="@+id/login_text_view_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
