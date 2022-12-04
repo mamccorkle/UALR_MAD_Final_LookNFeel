@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "391547114155",
-    "project_id": "movietheater-1d06a",
-    "storage_bucket": "movietheater-1d06a.appspot.com"
+    "project_number": "427616321573",
+    "project_id": "cinemahub-3e07d",
+    "storage_bucket": "cinemahub-3e07d.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:391547114155:android:5a1768fe756f93303d1dee",
+        "mobilesdk_app_id": "1:427616321573:android:10f2c0e3053c142f173fcc",
         "android_client_info": {
           "package_name": "com.example.cinemahub_looknfeel"
         }
       },
       "oauth_client": [
         {
-          "client_id": "391547114155-d4nqqis20hk2otbt1ni89n55mor31ntk.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.cinemahub_looknfeel",
-            "certificate_hash": "338f9a504a41aa261f208e65d7514df37720f05e"
-          }
-        },
-        {
-          "client_id": "391547114155-khsqe3gikaguirlsqredlnephlqdtcb6.apps.googleusercontent.com",
+          "client_id": "427616321573-7atup51soeg0lte4nqpul54kjvp6n8ek.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCXye68N0XoR3pPFtpoq8_e_f5_BlPE_7w"
+          "current_key": "AIzaSyDA-fmjmrY_Q78rDftHooBIo19RLqDfA80"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "391547114155-khsqe3gikaguirlsqredlnephlqdtcb6.apps.googleusercontent.com",
+              "client_id": "427616321573-7atup51soeg0lte4nqpul54kjvp6n8ek.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
