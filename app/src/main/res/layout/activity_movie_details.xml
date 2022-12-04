@@ -186,7 +186,7 @@
             app:layout_constraintTop_toBottomOf="@+id/tvDirectorCaption" />
 
         <HorizontalScrollView
-            android:id="@+id/horizontalScrollView2"
+            android:id="@+id/hsvShowtimes"
             android:layout_width="@dimen/moviedetails_hsv_width"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/s16dp"
@@ -250,7 +250,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/youtube_player_view" />
 
-<!--android:theme="?attr/actionBarTheme"-->
+        <Button
+            android:id="@+id/btnSelectSeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:paddingBottom="96dp"
+            android:text="Pick a seat(s)"
+            app:layout_constraintEnd_toEndOf="@+id/hsvShowtimes"
+            app:layout_constraintStart_toStartOf="@+id/hsvShowtimes"
+            app:layout_constraintTop_toBottomOf="@+id/hsvShowtimes" />
+
+        <!--android:theme="?attr/actionBarTheme"-->
 <!--        <androidx.appcompat.widget.Toolbar-->
 <!--            android:id="@+id/toolbar"-->
 <!--            android:layout_width="match_parent"-->

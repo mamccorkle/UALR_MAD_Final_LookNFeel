@@ -21,7 +21,7 @@
         android:title="@string/profile" />
 
     <item
-        android:id="@+id/ticket"
+        android:id="@+id/Ticket"
         android:icon="@drawable/ic_baseline_airplane_ticket_24"
         android:title="@string/ticket" />
 

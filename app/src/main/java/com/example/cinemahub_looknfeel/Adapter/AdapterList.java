@@ -45,8 +45,6 @@ public class AdapterList extends RecyclerView.Adapter
     {
         MovieViewHolder viewHolder = (MovieViewHolder) holder;
         Movie i = mMovies.get(position);
-
-        // Simple method to link the name to the appropriate user image:
         int[] resImages = {
                 R.drawable.black_adam,
                 R.drawable.halloween_ends,
@@ -56,7 +54,6 @@ public class AdapterList extends RecyclerView.Adapter
                 R.drawable.ticket_to_paradise,
                 R.drawable.poster_light
         };
-
         viewHolder.ivMoviePoster.setImageResource(resImages[i.getImageIndex()]);
         viewHolder.tvMovieTitle.setText(i.getTitle());
         viewHolder.tvMovieRating.setText(i.getRating().name());

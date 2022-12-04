@@ -1,5 +1,6 @@
 package com.example.cinemahub_looknfeel;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -90,5 +91,13 @@ public class MovieDetailsActivity extends AppCompatActivity {
             }
         });
 
+        binding.btnSelectSeat.setOnClickListener(v -> onSelectSeatBtnClicked());
+
     }
+
+    private void onSelectSeatBtnClicked() {
+        Intent intent = new Intent(this, MovieSeatingChartActivity.class);
+        startActivity(intent);
+    }
+
 }
