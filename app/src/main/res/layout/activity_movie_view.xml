@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutParent"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+
+    <TextView
+        android:id="@+id/tvMovieRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="RATING"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMovieRatingCaption"
+        app:layout_constraintStart_toEndOf="@+id/tvMovieRatingCaption"
+        app:layout_constraintTop_toTopOf="@+id/tvMovieRatingCaption" />
+
+    <TextView
+        android:id="@+id/tvMovieScoreCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Score:"
+        app:layout_constraintStart_toStartOf="@+id/ratingBar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMovieReleaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="RELEASE DATE"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMovieReleaseDateCaption"
+        app:layout_constraintStart_toEndOf="@+id/tvMovieReleaseDateCaption"
+        app:layout_constraintTop_toTopOf="@+id/tvMovieReleaseDateCaption" />
+
+    <ImageButton
+        android:id="@+id/ibMoviePoster"
+        android:layout_width="110dp"
+        android:layout_height="170dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerInside"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/poster_light" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ibMoviePoster" />
+
+    <TextView
+        android:id="@+id/tvMovieTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="MOVIE TITLE"
+        app:layout_constraintStart_toEndOf="@+id/ibMoviePoster"
+        app:layout_constraintTop_toTopOf="@+id/ibMoviePoster" />
+
+    <TextView
+        android:id="@+id/tvMovieRatingCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating:"
+        app:layout_constraintStart_toStartOf="@+id/tvMovieTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvMovieTitle" />
+
+    <TextView
+        android:id="@+id/tvMovieShowtimes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="Showtimes:"
+        app:layout_constraintStart_toStartOf="@+id/tvMovieRatingCaption"
+        app:layout_constraintTop_toBottomOf="@+id/tvMovieRatingCaption" />
+
+    <TextView
+        android:id="@+id/tvMovieReleaseDateCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Release Date:"
+        app:layout_constraintBottom_toTopOf="@+id/tvMovieGenreCaption"
+        app:layout_constraintStart_toStartOf="@+id/tvMovieShowtimes" />
+
+    <TextView
+        android:id="@+id/tvMovieGenreCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genre: "
+        app:layout_constraintBottom_toBottomOf="@+id/ibMoviePoster"
+        app:layout_constraintStart_toStartOf="@+id/tvMovieShowtimes" />
+
+    <TextView
+        android:id="@+id/tvMovieGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="GENRE"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMovieGenreCaption"
+        app:layout_constraintStart_toEndOf="@+id/tvMovieGenreCaption"
+        app:layout_constraintTop_toTopOf="@+id/tvMovieGenreCaption" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/tvMovieReleaseDateCaption"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/tvMovieShowtimes"
+        app:layout_constraintTop_toBottomOf="@+id/tvMovieShowtimes"
+        app:layout_constraintVertical_bias="0.0">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chpGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvName">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chp1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9 AM"
+                app:chipEndPadding="8dp"
+                app:chipStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chp2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:30 AM"
+                app:chipEndPadding="8dp"
+                app:chipStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chp3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 AM"
+                app:chipEndPadding="8dp"
+                app:chipStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chp4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10:30 AM"
+                app:chipEndPadding="8dp"
+                app:chipStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chp5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11 AM"
+                app:chipEndPadding="8dp"
+                app:chipStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chp6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11:30 AM"
+                app:chipEndPadding="8dp"
+                app:chipStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chp7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12 PM"
+                app:chipEndPadding="8dp"
+                app:chipStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chp8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:30 PM"
+                app:chipEndPadding="8dp"
+                app:chipStartPadding="8dp" />
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chp9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1 PM"
+                app:chipEndPadding="8dp"
+                app:chipStartPadding="8dp" />
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="24dp"
+        android:max="5"
+        android:min="0"
+        android:numStars="5"
+        android:rating="4.5"
+        android:stepSize="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMovieScoreCaption" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

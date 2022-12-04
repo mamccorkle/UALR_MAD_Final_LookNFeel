@@ -6,29 +6,29 @@
     android:layout_height="match_parent">
 
     <ImageButton
-        android:id="@+id/imageButton11"
+        android:id="@+id/ibTickets"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginTop="16dp"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton10"
+        app:layout_constraintTop_toBottomOf="@+id/ibMovies"
         app:srcCompat="@drawable/movie_ticket_trimmed" />
 
     <ImageButton
-        android:id="@+id/imageButton10"
+        android:id="@+id/ibMovies"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginTop="16dp"
         android:scaleType="centerInside"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton9"
+        app:layout_constraintTop_toBottomOf="@+id/ibTheaters"
         app:srcCompat="@drawable/movie_camera" />
 
     <ImageButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/ibTheaters"
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginTop="16dp"
@@ -38,43 +38,58 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/_000_f_102264998_hdlxv6nyontgdcsk8bmfvezcxmf8zs97" />
 
-
-
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".MainActivity"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-        <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/bottomAppBar"
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_gravity="bottom"
-            app:fabCradleMargin="10dp"
-            app:fabCradleRoundedCornerRadius="10dp"
-            app:fabCradleVerticalOffset="10dp">
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_nav_menu" />
 
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/bottomNavigationView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginEnd="16dp"
-                android:background="@android:color/transparent"
-                app:menu="@menu/bottom_nav_menu" />
+    </LinearLayout>
 
-        </com.google.android.material.bottomappbar.BottomAppBar>
+<!--    <androidx.coordinatorlayout.widget.CoordinatorLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        tools:context=".MainActivity">-->
 
-<!--        <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--            android:id="@+id/fab"-->
-<!--            android:layout_width="wrap_content"-->
+<!--        &lt;!&ndash;android:layout_height="80dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;app:fabCradleMargin="10dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;app:fabCradleRoundedCornerRadius="10dp"&ndash;&gt;-->
+<!--        &lt;!&ndash;app:fabCradleVerticalOffset="10dp"&ndash;&gt;-->
+<!--        <com.google.android.material.bottomappbar.BottomAppBar-->
+<!--            android:id="@+id/bottomAppBar"-->
+<!--            android:layout_width="match_parent"-->
 <!--            android:layout_height="wrap_content"-->
-<!--            android:contentDescription="@string/app_name"-->
-<!--            android:src="@drawable/ic_baseline_add_24"-->
-<!--            app:layout_anchor="@id/bottomAppBar" />-->
+<!--            android:layout_gravity="bottom"-->
+<!--            app:backgroundTint="@color/black" >-->
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+<!--            <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--                android:id="@+id/bottomNavigationView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:layout_marginEnd="16dp"-->
+<!--                android:background="@android:color/transparent"-->
+<!--                app:menu="@menu/bottom_nav_menu" />-->
+
+<!--        </com.google.android.material.bottomappbar.BottomAppBar>-->
+
+<!--        &lt;!&ndash;        <com.google.android.material.floatingactionbutton.FloatingActionButton&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:id="@+id/fab"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:contentDescription="@string/app_name"&ndash;&gt;-->
+<!--        &lt;!&ndash;            android:src="@drawable/ic_baseline_add_24"&ndash;&gt;-->
+<!--        &lt;!&ndash;            app:layout_anchor="@id/bottomAppBar" />&ndash;&gt;-->
+
+<!--    </androidx.coordinatorlayout.widget.CoordinatorLayout>-->
 
 
 
