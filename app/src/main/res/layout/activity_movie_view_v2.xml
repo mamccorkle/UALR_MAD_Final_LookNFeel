@@ -43,7 +43,7 @@
         android:scaleType="centerInside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/poster_light"
+        app:srcCompat="@drawable/icon_generic_movie_poster"
         android:contentDescription="@string/movie_title_caps" />
 
     <View

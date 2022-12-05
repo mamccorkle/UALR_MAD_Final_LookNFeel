@@ -39,7 +39,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/tvTitle"
-            app:srcCompat="@drawable/poster_light"
+            app:srcCompat="@drawable/icon_generic_movie_poster"
             android:contentDescription="@string/movie_title_caps" />
 
         <TextView
@@ -200,6 +200,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/moviedetails_chipgroup_margintop"
+                app:singleSelection="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/youtube_player_view">
@@ -255,25 +256,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:paddingBottom="96dp"
-            android:text="Pick a seat(s)"
+            android:paddingBottom="8dp"
+            android:text="Pick seat(s)"
             app:layout_constraintEnd_toEndOf="@+id/hsvShowtimes"
             app:layout_constraintStart_toStartOf="@+id/hsvShowtimes"
             app:layout_constraintTop_toBottomOf="@+id/hsvShowtimes" />
 
-        <!--android:theme="?attr/actionBarTheme"-->
-<!--        <androidx.appcompat.widget.Toolbar-->
-<!--            android:id="@+id/toolbar"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:background="?attr/colorPrimary"-->
-<!--            android:minHeight="?attr/actionBarSize"-->
-<!--            android:elevation="4dp"-->
-<!--            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"-->
-<!--            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
-<!--            app:layout_constraintEnd_toEndOf="parent"-->
-<!--            app:layout_constraintStart_toStartOf="parent"-->
-<!--            app:layout_constraintTop_toTopOf="parent" />-->
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSelectSeat" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

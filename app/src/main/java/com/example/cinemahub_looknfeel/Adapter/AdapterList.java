@@ -46,13 +46,13 @@ public class AdapterList extends RecyclerView.Adapter
         MovieViewHolder viewHolder = (MovieViewHolder) holder;
         Movie i = mMovies.get(position);
         int[] resImages = {
-                R.drawable.black_adam,
-                R.drawable.halloween_ends,
-                R.drawable.one_piece_film_red,
-                R.drawable.prey_for_the_devil,
-                R.drawable.smile,
-                R.drawable.ticket_to_paradise,
-                R.drawable.poster_light
+                R.drawable.movie_black_adam,
+                R.drawable.movie_halloween_ends,
+                R.drawable.movie_one_piece_film_red,
+                R.drawable.movie_prey_for_the_devil,
+                R.drawable.movie_smile,
+                R.drawable.movie_ticket_to_paradise,
+                R.drawable.icon_generic_movie_poster
         };
         viewHolder.ivMoviePoster.setImageResource(resImages[i.getImageIndex()]);
         viewHolder.tvMovieTitle.setText(i.getTitle());

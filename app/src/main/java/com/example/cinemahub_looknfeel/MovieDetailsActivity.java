@@ -1,12 +1,18 @@
 package com.example.cinemahub_looknfeel;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.CompoundButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.cinemahub_looknfeel.Adapter.AdapterList;
 import com.example.cinemahub_looknfeel.databinding.ActivityMovieDetailsBinding;
+import com.example.cinemahub_looknfeel.model.Event;
 import com.example.cinemahub_looknfeel.model.Movie;
 import com.google.android.material.chip.Chip;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
@@ -20,17 +26,14 @@ public class MovieDetailsActivity extends AppCompatActivity {
     // Add the binder:
     private ActivityMovieDetailsBinding binding;
 
+    public static final String EXTRA_MOVIE = "MovieData";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         binding = ActivityMovieDetailsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-//        // Enable the back button:
-//        Toolbar toolbar = findViewById(R.id.bottomAppBar);
-//        setSupportActionBar(toolbar);
-//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         initComponent();
     }
@@ -63,18 +66,27 @@ public class MovieDetailsActivity extends AppCompatActivity {
         {
             Chip tempChip = new Chip(this);
             tempChip.setText(showTime);
+            tempChip.setCheckable(true);
+            tempChip.setCheckedIconVisible(true);
+            tempChip.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    tempChip.setSelected(true);
+                    tempChip.setChecked(true);
+                }
+            });
             binding.chpGroup.addView(tempChip);
         }
 
         // Poster - Imageindex:
         int[] resImages = {
-                R.drawable.black_adam,
-                R.drawable.halloween_ends,
-                R.drawable.one_piece_film_red,
-                R.drawable.prey_for_the_devil,
-                R.drawable.smile,
-                R.drawable.ticket_to_paradise,
-                R.drawable.poster_light
+                R.drawable.movie_black_adam,
+                R.drawable.movie_halloween_ends,
+                R.drawable.movie_one_piece_film_red,
+                R.drawable.movie_prey_for_the_devil,
+                R.drawable.movie_smile,
+                R.drawable.movie_ticket_to_paradise,
+                R.drawable.icon_generic_movie_poster
         };
         binding.ivPoster.setImageResource(resImages[movieReceiving.getImageIndex()]);
 
@@ -91,13 +103,29 @@ public class MovieDetailsActivity extends AppCompatActivity {
             }
         });
 
-        binding.btnSelectSeat.setOnClickListener(v -> onSelectSeatBtnClicked());
+        binding.btnSelectSeat.setOnClickListener(v -> onSelectSeatBtnClicked(v, movieReceiving ));
 
     }
 
-    private void onSelectSeatBtnClicked() {
-        Intent intent = new Intent(this, MovieSeatingChartActivity.class);
-        startActivity(intent);
+    //private void onSelectSeatBtnClicked(View v, Movie movie, AdapterList mAdapter ) {
+    private void onSelectSeatBtnClicked(View v, Movie movie ) {
+        if(binding.chpGroup.getCheckedChipId() == -1) {
+            binding.chpGroup.requestFocus();
+            binding.chpGroup.setBackgroundColor(Color.parseColor("#FF7F7F"));
+        }
+        else {
+            // Create the intent:
+            Intent intent = new Intent(this, MovieSeatingChartActivity.class);
+
+            // Create the event class and add the movie and showtime to it:
+            Event event = new Event(movie, ((Chip) binding.chpGroup.getChildAt((int)binding.chpGroup.getCheckedChipId() - 1)).getText().toString());
+
+            // Set the intent to pass the event object:
+            intent.putExtra(EXTRA_MOVIE, event);
+
+            // Start the new activity and send the data at the same time:
+            startActivity(intent);
+        }
     }
 
 }

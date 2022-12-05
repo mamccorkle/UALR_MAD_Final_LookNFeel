@@ -36,10 +36,10 @@ public class MovieSelectionActivity extends AppCompatActivity {
     private void initComponent()
     {
         // RecyclerView Set Up: /////////////////////////////////////////////////////////////////////////
+
         binding = ActivityMovieSelectionBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        //List<Movie> movies = DataGenerator.generateMovieData(this);
         List<Movie> movies = new ArrayList<>();
         movies.addAll(DataGenerator.generateMovieData(this));
 

@@ -47,6 +47,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        // TODO: link showtimes to the class on the movie details page
+        // TODO: link seating to the class on the seating page
+        // TODO: create the theater class using the theater selection page
+        // TODO: add the seating, movie, and theater to the event class
+
+
+
 //        // Actionbar Set Up: ///////////////////////////////////////////////////////////////////////
 //
 //        // calling the action bar

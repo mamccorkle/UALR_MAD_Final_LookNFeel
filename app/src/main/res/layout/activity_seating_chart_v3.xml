@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -19,7 +18,7 @@
         android:id="@+id/tvSelectSeat2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Please select the desired seat"
+        android:text="@string/please_select_the_desired_seat"
         app:layout_constraintBottom_toTopOf="@+id/seatSpinner"
         app:layout_constraintStart_toStartOf="@+id/seatSpinner" />
 
@@ -38,7 +37,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:enabled="false"
-        android:text="H - Handicap"
+        android:text="@string/h_handicap"
         android:textColor="#4FB1CB"
         app:layout_constraintStart_toStartOf="@+id/ivScreen"
         app:layout_constraintTop_toBottomOf="@+id/ivScreen" />
@@ -284,7 +283,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:enabled="false"
-        android:text="R - Reclining Seats"
+        android:text="@string/r_reclining_seats"
         android:textColor="#FF7AB2"
         app:layout_constraintEnd_toEndOf="@+id/ivScreen"
         app:layout_constraintTop_toBottomOf="@+id/ivScreen" />

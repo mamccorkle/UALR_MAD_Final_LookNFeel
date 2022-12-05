@@ -30,4 +30,7 @@
     <string name="date_caps">DATE</string>
 
     <string name="select_showtime_caption">Select a showtime:</string>
+    <string name="r_reclining_seats">R - Reclining Seats</string>
+    <string name="h_handicap">H - Handicap</string>
+    <string name="please_select_the_desired_seat">Please select the desired seat</string>
 </resources>
