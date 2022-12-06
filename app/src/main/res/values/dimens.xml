@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- "@dimen/s????" -->
+
+    <!-- Genaral Spacing: -->
+    <dimen name="s4dp">4dp</dimen>
+    <dimen name="s8dp">8dp</dimen>
+    <dimen name="s12dp">12dp</dimen>
+    <dimen name="s16dp">16dp</dimen>
+    <dimen name="s24dp">24dp</dimen>
+    <dimen name="s32dp">32dp</dimen>
+    <dimen name="s48dp">48dp</dimen>
+    <dimen name="s56dp">56dp</dimen>
+    <dimen name="s64dp">64dp</dimen>
+    <dimen name="s96dp">96dp</dimen>
+    <dimen name="s104dp">104dp</dimen>
+    <dimen name="s128dp">128dp</dimen>
+
+    <!-- Specific Spacing: -->
+    <dimen name="recyclerview_width">409dp</dimen>
+    <dimen name="recyclerview_height">673dp</dimen>
+
+    <!-- Movie View: -->
+    <!-- "@dimen/movieview_????" -->
+    <dimen name="movieview_height">200dp</dimen>
+    <dimen name="movieview_poster_width">110dp</dimen>
+    <dimen name="movieview_poster_height">170dp</dimen>
+    <dimen name="movieview_divider_width">409dp</dimen>
+    <dimen name="movieview_divider_height">1dp</dimen>
+    <dimen name="movieview_divider_margintop">10dp</dimen>
+    <dimen name="movieview_title_text_size">18sp</dimen>
+
+    <!-- Movie Details: -->
+    <!-- "@dimen/moviedetails_????" -->
+    <dimen name="moviedetails_divider_width">0dp</dimen>
+    <dimen name="moviedetails_divider_height">1dp</dimen>
+    <dimen name="moviedetails_poster_width">236dp</dimen>
+    <dimen name="moviedetails_poster_height">350dp</dimen>
+    <dimen name="moviedetails_title_text_size">18sp</dimen>
+    <dimen name="moviedetails_synopsis_width">0sp</dimen>
+    <dimen name="moviedetails_synopsis_height">161sp</dimen>
+    <dimen name="moviedetails_hsv_width">0sp</dimen>
+    <dimen name="moviedetails_hsv_paddingbottom">50sp</dimen>
+    <dimen name="moviedetails_chipgroup_margintop">0sp</dimen>
+
+</resources>

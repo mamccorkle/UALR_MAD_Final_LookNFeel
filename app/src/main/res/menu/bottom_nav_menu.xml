@@ -3,13 +3,13 @@
 
     <item
         android:id="@+id/home"
-        android:icon="@drawable/ic_baseline_home_24"
-        android:title="Home" />
+        android:icon="@drawable/ic_home"
+        android:title="@string/home" />
 
     <item
         android:id="@+id/Search"
-        android:icon="@drawable/ic_baseline_theaters_24"
-        android:title="Search" />
+        android:icon="@drawable/ic_theaters"
+        android:title="@string/search" />
 
 <!--    <item-->
 <!--        android:id="@+id/placeholder"-->
@@ -17,17 +17,17 @@
 
     <item
         android:id="@+id/Profile"
-        android:icon="@drawable/ic_baseline_movie_24"
-        android:title="Profile" />
+        android:icon="@drawable/ic_movie"
+        android:title="@string/profile" />
 
     <item
-        android:id="@+id/ticket"
-        android:icon="@drawable/ic_baseline_airplane_ticket_24"
-        android:title="ticket" />
+        android:id="@+id/Ticket"
+        android:icon="@drawable/ic_airplane_ticket"
+        android:title="@string/ticket" />
 
     <item
         android:id="@+id/Settings"
-        android:icon="@drawable/ic_baseline_settings_24"
-        android:title="Settings" />
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings" />
 
 </menu>
