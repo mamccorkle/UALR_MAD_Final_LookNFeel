@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">CinemaHub_LookNFeel</string>
+    <string name="app_name">Popcorn Bookings</string>
 
     <!-- Menu Strings: -->
     <string name="home">Home</string>
@@ -7,6 +7,7 @@
     <string name="profile">Profile</string>
     <string name="ticket">Ticket</string>
     <string name="settings">Settings</string>
+    <color name="item_background">#118899</color>
 
 
     <string name="genre_caps">GENRE</string>

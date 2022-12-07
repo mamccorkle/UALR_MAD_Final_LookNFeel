@@ -27,6 +27,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
     private ActivityMovieDetailsBinding binding;
 
     public static final String EXTRA_MOVIE = "MovieData";
+    public static final String EXTRA_MOVIE_SHOWTIMES = "ShowTimesData";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +61,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
         binding.tvGenre.setText(movieReceiving.getGenre().name());
 
-        // Showtimes:
+        // TODO: REMOVE Showtimes here:
         List<String> showTimes = movieReceiving.getShowTimes();
         for (String showTime : showTimes )
         {
@@ -109,23 +110,29 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
     //private void onSelectSeatBtnClicked(View v, Movie movie, AdapterList mAdapter ) {
     private void onSelectSeatBtnClicked(View v, Movie movie ) {
-        if(binding.chpGroup.getCheckedChipId() == -1) {
-            binding.chpGroup.requestFocus();
-            binding.chpGroup.setBackgroundColor(Color.parseColor("#FF7F7F"));
-        }
-        else {
+//        if(binding.chpGroup.getCheckedChipId() == -1) {
+//            binding.chpGroup.requestFocus();
+//            binding.chpGroup.setBackgroundColor(Color.parseColor("#FF7F7F"));
+//        }
+//        else {
             // Create the intent:
             Intent intent = new Intent(this, MovieSeatingChartActivity.class);
 
             // Create the event class and add the movie and showtime to it:
-            Event event = new Event(movie, ((Chip) binding.chpGroup.getChildAt((int)binding.chpGroup.getCheckedChipId() - 1)).getText().toString());
+            //Event event = new Event(movie, ((Chip) binding.chpGroup.getChildAt((int)binding.chpGroup.getCheckedChipId() - 1)).getText().toString());
+            Event event = new Event(movie);
+
+//            Bundle bundle = new Bundle();
+//            bundle.putParcelable(EXTRA_MOVIE, event);
+//            bundle.putParcelable(EXTRA_MOVIE_SHOWTIMES, movie.getShowTimes());
+//            intent.putExtras(bundle);
 
             // Set the intent to pass the event object:
             intent.putExtra(EXTRA_MOVIE, event);
 
             // Start the new activity and send the data at the same time:
             startActivity(intent);
-        }
+//        }
     }
 
 }

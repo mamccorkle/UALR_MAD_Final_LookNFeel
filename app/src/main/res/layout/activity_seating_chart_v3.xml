@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -8,284 +9,544 @@
         android:id="@+id/tvScreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
         android:enabled="false"
         android:text="screen"
-        app:layout_constraintBottom_toTopOf="@+id/ivScreen"
-        app:layout_constraintEnd_toEndOf="@+id/ivScreen"
-        app:layout_constraintStart_toStartOf="@+id/ivScreen" />
-
-    <TextView
-        android:id="@+id/tvSelectSeat2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/please_select_the_desired_seat"
-        app:layout_constraintBottom_toTopOf="@+id/seatSpinner"
-        app:layout_constraintStart_toStartOf="@+id/seatSpinner" />
-
-    <ImageView
-        android:id="@+id/ivRecliningHighlight"
-        android:layout_width="0dp"
-        android:layout_height="51dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tbSeat1"
-        app:layout_constraintEnd_toEndOf="@+id/ivScreen"
-        app:layout_constraintStart_toStartOf="@+id/ivScreen"
-        app:layout_constraintTop_toTopOf="@+id/tbSeat1"
-        app:srcCompat="@drawable/shape_rectangle_highlight_red" />
-
-    <TextView
-        android:id="@+id/tvHandicap2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:enabled="false"
-        android:text="@string/h_handicap"
-        android:textColor="#4FB1CB"
-        app:layout_constraintStart_toStartOf="@+id/ivScreen"
-        app:layout_constraintTop_toBottomOf="@+id/ivScreen" />
-
-    <Button
-        android:id="@+id/btnProceed"
-        android:layout_width="300dp"
-        android:layout_height="54dp"
-        android:layout_marginBottom="64dp"
-        android:text="Proceed"
-        app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ToggleButton
-        android:id="@+id/tbSeat1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:enabled="false"
-        android:text="1"
-        android:textOff="1"
-        android:textOn="1"
-        app:layout_constraintEnd_toStartOf="@+id/tbSeat2"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/ivScreen"
-        app:layout_constraintTop_toBottomOf="@+id/tbSeat7" />
-
-    <ToggleButton
-        android:id="@+id/tbSeat2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:enabled="false"
-        android:text="2"
-        android:textOff="2"
-        android:textOn="2"
-        app:layout_constraintBottom_toBottomOf="@+id/tbSeat1"
-        app:layout_constraintEnd_toStartOf="@+id/tbSeat3"
-        app:layout_constraintStart_toEndOf="@id/tbSeat1"
-        app:layout_constraintTop_toTopOf="@+id/tbSeat1"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ToggleButton
-        android:id="@+id/tbSeat3"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:enabled="false"
-        android:text="1"
-        android:textOff="3"
-        android:textOn="3"
-        app:layout_constraintBottom_toBottomOf="@+id/tbSeat2"
-        app:layout_constraintEnd_toStartOf="@+id/tbSeat4"
-        app:layout_constraintStart_toEndOf="@id/tbSeat2"
-        app:layout_constraintTop_toTopOf="@+id/tbSeat2"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ToggleButton
-        android:id="@+id/tbSeat4"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:enabled="false"
-        android:textOff="4"
-        android:textOn="4"
-        app:layout_constraintBottom_toBottomOf="@+id/tbSeat3"
-        app:layout_constraintEnd_toStartOf="@+id/tbSeat5"
-        app:layout_constraintStart_toEndOf="@id/tbSeat3"
-        app:layout_constraintTop_toTopOf="@+id/tbSeat3"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ToggleButton
-        android:id="@+id/tbSeat5"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:enabled="false"
-        android:textOff="5"
-        android:textOn="5"
-        app:layout_constraintBottom_toBottomOf="@+id/tbSeat4"
-        app:layout_constraintEnd_toStartOf="@+id/tbSeat6"
-        app:layout_constraintStart_toEndOf="@id/tbSeat4"
-        app:layout_constraintTop_toTopOf="@+id/tbSeat4"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ToggleButton
-        android:id="@+id/tbSeat6"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:enabled="false"
-        android:textOff="6"
-        android:textOn="6"
-        app:layout_constraintBottom_toBottomOf="@+id/tbSeat5"
-        app:layout_constraintEnd_toEndOf="@+id/ivScreen"
-        app:layout_constraintStart_toEndOf="@id/tbSeat5"
-        app:layout_constraintTop_toTopOf="@+id/tbSeat5"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ToggleButton
-        android:id="@+id/tbSeat7"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="16dp"
-        android:enabled="false"
-        android:textOff="7"
-        android:textOn="7"
-        app:layout_constraintEnd_toStartOf="@+id/tbSeat8"
-        app:layout_constraintStart_toStartOf="@+id/tbSeat1"
-        app:layout_constraintTop_toBottomOf="@+id/tbSeat12" />
-
-    <ToggleButton
-        android:id="@+id/tbSeat8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:enabled="false"
-        android:textOff="8"
-        android:textOn="8"
-        app:layout_constraintBottom_toBottomOf="@+id/tbSeat7"
-        app:layout_constraintEnd_toStartOf="@+id/tbSeat9"
-        app:layout_constraintStart_toEndOf="@id/tbSeat7"
-        app:layout_constraintTop_toTopOf="@+id/tbSeat7" />
-
-    <ToggleButton
-        android:id="@+id/tbSeat9"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:enabled="false"
-        android:textOff="9"
-        android:textOn="9"
-        app:layout_constraintBottom_toBottomOf="@+id/tbSeat8"
-        app:layout_constraintEnd_toStartOf="@+id/tbSeat10"
-        app:layout_constraintStart_toEndOf="@id/tbSeat8"
-        app:layout_constraintTop_toTopOf="@+id/tbSeat8" />
-
-    <ToggleButton
-        android:id="@+id/tbSeat10"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:enabled="false"
-        android:textOff="10"
-        android:textOn="10"
-        app:layout_constraintBottom_toBottomOf="@+id/tbSeat9"
-        app:layout_constraintEnd_toStartOf="@+id/tbSeat11"
-        app:layout_constraintStart_toEndOf="@id/tbSeat9"
-        app:layout_constraintTop_toTopOf="@+id/tbSeat9" />
-
-    <ToggleButton
-        android:id="@+id/tbSeat11"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:enabled="false"
-        android:textOff="11"
-        android:textOn="11"
-        app:layout_constraintBottom_toBottomOf="@+id/tbSeat10"
-        app:layout_constraintEnd_toEndOf="@+id/tbSeat6"
-        app:layout_constraintStart_toEndOf="@id/tbSeat10"
-        app:layout_constraintTop_toTopOf="@+id/tbSeat10" />
-
-    <ImageView
-        android:id="@+id/ivHandicapHighlight"
-        android:layout_width="272dp"
-        android:layout_height="51dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tbSeat12"
-        app:layout_constraintEnd_toEndOf="@+id/tbSeat6"
-        app:layout_constraintStart_toStartOf="@+id/tbSeat1"
-        app:layout_constraintTop_toTopOf="@+id/tbSeat12"
-        app:srcCompat="@drawable/shape_rectangle_highlight_blue" />
-
-    <ToggleButton
-        android:id="@+id/tbSeat12"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="32dp"
-        android:enabled="false"
-        android:textOff="12"
-        android:textOn="12"
-        app:layout_constraintEnd_toStartOf="@+id/tbSeat13"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/tbSeat7"
-        app:layout_constraintTop_toBottomOf="@+id/tvRecliningSeats" />
-
-    <ToggleButton
-        android:id="@+id/tbSeat15"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:enabled="false"
-        android:textOff="15"
-        android:textOn="15"
-        app:layout_constraintBottom_toBottomOf="@+id/tbSeat14"
-        app:layout_constraintEnd_toEndOf="@+id/tbSeat11"
-        app:layout_constraintStart_toEndOf="@id/tbSeat14"
-        app:layout_constraintTop_toTopOf="@+id/tbSeat14" />
-
-    <ToggleButton
-        android:id="@+id/tbSeat14"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:enabled="false"
-        android:textOff="14"
-        android:textOn="14"
-        app:layout_constraintBottom_toBottomOf="@+id/tbSeat13"
-        app:layout_constraintEnd_toStartOf="@+id/tbSeat15"
-        app:layout_constraintStart_toEndOf="@id/tbSeat13"
-        app:layout_constraintTop_toTopOf="@+id/tbSeat13" />
-
-    <ToggleButton
-        android:id="@+id/tbSeat13"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:enabled="false"
-        android:textOff="13"
-        android:textOn="13"
-        app:layout_constraintBottom_toBottomOf="@+id/tbSeat12"
-        app:layout_constraintEnd_toStartOf="@+id/tbSeat14"
-        app:layout_constraintStart_toEndOf="@id/tbSeat12"
-        app:layout_constraintTop_toTopOf="@+id/tbSeat12" />
-
-    <Spinner
-        android:id="@+id/seatSpinner"
-        android:layout_width="0dp"
-        android:layout_height="30dp"
-        android:background="@drawable/shape_spinner_outline"
-        android:popupBackground="#f0DFDFE0"
-        android:spinnerMode="dropdown"
-        app:layout_constraintBottom_toTopOf="@+id/btnProceed"
-        app:layout_constraintEnd_toEndOf="@+id/tbSeat11"
-        app:layout_constraintStart_toStartOf="@+id/tbSeat7"
-        app:layout_constraintTop_toBottomOf="@+id/tbSeat1"
-        app:layout_constraintVertical_bias="0.42000002" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/ivScreen"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="96dp"
         android:layout_marginEnd="32dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvScreen"
         app:srcCompat="@drawable/seating_chart_screen_v2" />
+
+    <TextView
+        android:id="@+id/tvHandicap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="H - Handicap"
+        android:textColor="#AA4FB1CB"
+        app:layout_constraintStart_toStartOf="@+id/ivScreen"
+        app:layout_constraintTop_toBottomOf="@+id/ivScreen" />
 
     <TextView
         android:id="@+id/tvRecliningSeats"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:enabled="false"
-        android:text="@string/r_reclining_seats"
-        android:textColor="#FF7AB2"
+        android:text="R - Reclining Seats"
+        android:textColor="#AAFF7AB2"
         app:layout_constraintEnd_toEndOf="@+id/ivScreen"
         app:layout_constraintTop_toBottomOf="@+id/ivScreen" />
+
+    <GridLayout
+        android:id="@+id/glSeatingChart"
+        android:layout_width="wrap_content"
+        android:layout_height="246dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="64dp"
+        android:columnCount="11"
+        android:rowCount="7"
+        app:layout_constraintEnd_toEndOf="@+id/ivScreen"
+        app:layout_constraintStart_toStartOf="@+id/ivScreen"
+        app:layout_constraintTop_toBottomOf="@+id/ivScreen">
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <ToggleButton
+            android:id="@+id/tbSeatGL12"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_rectangle"
+            android:backgroundTint="#AA4FB1CB"
+            android:textOff="12"
+            android:textOn="12"
+            android:textSize="11sp"
+            tools:layout_editor_absoluteX="137dp"
+            tools:layout_editor_absoluteY="48dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <ToggleButton
+            android:id="@+id/tbSeatGL15"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_rectangle"
+            android:backgroundTint="#AA4FB1CB"
+            android:textOff="15"
+            android:textOn="15"
+            android:textSize="11sp"
+            tools:layout_editor_absoluteX="249dp"
+            tools:layout_editor_absoluteY="48dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <ToggleButton
+            android:id="@+id/tbSeatGL13"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_rectangle"
+            android:backgroundTint="#AA4FB1CB"
+            android:textOff="13"
+            android:textOn="13"
+            android:textSize="11sp"
+            tools:layout_editor_absoluteX="168dp"
+            tools:layout_editor_absoluteY="73dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <ToggleButton
+            android:id="@+id/tbSeatGL14"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_rectangle"
+            android:backgroundTint="#AA4FB1CB"
+            android:textOff="14"
+            android:textOn="14"
+            android:textSize="11sp"
+            tools:layout_editor_absoluteX="218dp"
+            tools:layout_editor_absoluteY="73dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <ToggleButton
+            android:id="@+id/tbSeatGL7"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_rectangle"
+            android:backgroundTint="#A3A3A3"
+            android:textOff="7"
+            android:textOn="7"
+            android:textSize="11sp"
+            tools:layout_editor_absoluteX="74dp"
+            tools:layout_editor_absoluteY="98dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <ToggleButton
+            android:id="@+id/tbSeatGL11"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_rectangle"
+            android:backgroundTint="#A3A3A3"
+            android:textOff="11"
+            android:textOn="11"
+            android:textSize="11sp"
+            tools:layout_editor_absoluteX="312dp"
+            tools:layout_editor_absoluteY="98dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <ToggleButton
+            android:id="@+id/tbSeatGL8"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_rectangle"
+            android:backgroundTint="#A3A3A3"
+            android:textOff="8"
+            android:textOn="8"
+            android:textSize="11sp"
+            tools:layout_editor_absoluteX="137dp"
+            tools:layout_editor_absoluteY="123dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <ToggleButton
+            android:id="@+id/tbSeatGL10"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_rectangle"
+            android:backgroundTint="#A3A3A3"
+            android:textOff="10"
+            android:textOn="10"
+            android:textSize="11sp"
+            tools:layout_editor_absoluteX="249dp"
+            tools:layout_editor_absoluteY="123dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <ToggleButton
+            android:id="@+id/tbSeatGL1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_rectangle"
+            android:backgroundTint="#AAFF7AB2"
+            android:textOff="1"
+            android:textOn="1"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toStartOf="@+id/tbSeatGL2"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="148dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <ToggleButton
+            android:id="@+id/tbSeatGL9"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_rectangle"
+            android:backgroundTint="#A3A3A3"
+            android:textOff="9"
+            android:textOn="9"
+            android:textSize="11sp"
+            tools:layout_editor_absoluteX="193dp"
+            tools:layout_editor_absoluteY="148dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <ToggleButton
+            android:id="@+id/tbSeatGL6"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_rectangle"
+            android:backgroundTint="#AAFF7AB2"
+            android:textOff="6"
+            android:textOn="6"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tbSeatGL5"
+            tools:layout_editor_absoluteY="148dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <ToggleButton
+            android:id="@+id/tbSeatGL2"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_rectangle"
+            android:backgroundTint="#AAFF7AB2"
+            android:textOff="2"
+            android:textOn="2"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toStartOf="@+id/tbSeatGL3"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tbSeatGL1"
+            tools:layout_editor_absoluteY="173dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <ToggleButton
+            android:id="@+id/tbSeatGL5"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_rectangle"
+            android:backgroundTint="#AAFF7AB2"
+            android:textOff="5"
+            android:textOn="5"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toStartOf="@+id/tbSeatGL6"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tbSeatGL4"
+            tools:layout_editor_absoluteY="173dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <ToggleButton
+            android:id="@+id/tbSeatGL3"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_rectangle"
+            android:backgroundTint="#AAFF7AB2"
+            android:textOff="3"
+            android:textOn="3"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toStartOf="@+id/tbSeatGL4"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tbSeatGL2"
+            tools:layout_editor_absoluteY="198dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <ToggleButton
+            android:id="@+id/tbSeatGL4"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/shape_rectangle"
+            android:backgroundTint="#AAFF7AB2"
+            android:textOff="4"
+            android:textOn="4"
+            android:textSize="11sp"
+            app:layout_constraintEnd_toStartOf="@+id/tbSeatGL5"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tbSeatGL3"
+            tools:layout_editor_absoluteY="198dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+        <Space
+            android:layout_width="35dp"
+            android:layout_height="35dp" />
+
+    </GridLayout>
+
+    <TextView
+        android:id="@+id/tvShowtimesCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Select a showtime:"
+        app:layout_constraintStart_toStartOf="@+id/tvHandicap"
+        app:layout_constraintTop_toBottomOf="@+id/glSeatingChart" />
+
+    <HorizontalScrollView
+        android:id="@+id/hsvShowtimes"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:paddingBottom="40dp"
+        android:scrollbars="none"
+        app:layout_constraintEnd_toEndOf="@+id/tvRecliningSeats"
+        app:layout_constraintStart_toStartOf="@+id/tvHandicap"
+        app:layout_constraintTop_toBottomOf="@+id/tvShowtimesCaption">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chpGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvShowtimesCaption"
+            app:singleSelection="true">
+
+            <!-- Chip Area -->
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </HorizontalScrollView>
+
+    <Button
+        android:id="@+id/btnProceedToCheckout"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:text="Proceed to Checkout"
+        app:cornerRadius="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/hsvShowtimes"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="@+id/hsvShowtimes"
+        app:layout_constraintTop_toBottomOf="@+id/hsvShowtimes" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -191,6 +191,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/s16dp"
             android:paddingBottom="@dimen/moviedetails_hsv_width"
+            android:visibility="gone"
             app:layout_constraintEnd_toEndOf="@+id/youtube_player_view"
             app:layout_constraintStart_toStartOf="@+id/youtube_player_view"
             app:layout_constraintTop_toBottomOf="@+id/tvShowtimesCaption">
@@ -200,10 +201,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/moviedetails_chipgroup_margintop"
-                app:singleSelection="true"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/youtube_player_view">
+                app:layout_constraintTop_toBottomOf="@+id/youtube_player_view"
+                app:singleSelection="true">
 
             </com.google.android.material.chip.ChipGroup>
 
@@ -215,6 +216,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/s16dp"
             android:text="@string/select_showtime_caption"
+            android:visibility="gone"
             app:layout_constraintStart_toStartOf="@+id/youtube_player_view"
             app:layout_constraintTop_toBottomOf="@+id/divider4" />
 
@@ -257,7 +259,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:paddingBottom="8dp"
-            android:text="Pick seat(s)"
+            android:text="Pick Seat(s) and Times"
             app:layout_constraintEnd_toEndOf="@+id/hsvShowtimes"
             app:layout_constraintStart_toStartOf="@+id/hsvShowtimes"
             app:layout_constraintTop_toBottomOf="@+id/hsvShowtimes" />
