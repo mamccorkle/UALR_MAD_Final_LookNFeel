@@ -7,6 +7,7 @@
     <string name="profile">Profile</string>
     <string name="ticket">Ticket</string>
     <string name="settings">Settings</string>
+    <color name="item_background">#118899</color>
 
 
     <string name="genre_caps">GENRE</string>
