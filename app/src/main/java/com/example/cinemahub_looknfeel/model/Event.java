@@ -54,6 +54,9 @@ public class Event implements Parcelable {
 
     // Constructors:
     public Event( ) { }
+    public Event(Movie movie) {
+        this.movie = movie;
+    }
     public Event(Movie movie, String showTime) {
         this.movie = movie;
         this.showTime = showTime;
@@ -74,6 +77,7 @@ public class Event implements Parcelable {
     public int getPersons() { return persons; }
     public List<String> getConcessions() { return concessions; }
     public String getShowTime() { return showTime; }
+    public List<String> getAvailableShowTimes() { return this.movie.getShowTimes(); }
 
     // Setters:
     public void setMovie(Movie movie) { this.movie = movie; }
