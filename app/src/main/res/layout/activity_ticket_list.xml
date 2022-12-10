@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutParent"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvMovieDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20221207"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMovieDateCaption"
+            app:layout_constraintStart_toStartOf="@+id/tvMovieTheater"
+            app:layout_constraintTop_toTopOf="@+id/tvMovieDateCaption" />
+
+        <TextView
+            android:id="@+id/tvMovieSeats"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMovieSeatsCaption"
+            app:layout_constraintStart_toStartOf="@+id/tvMovieTheater"
+            app:layout_constraintTop_toTopOf="@+id/tvMovieSeatsCaption" />
+
+        <ImageView
+            android:id="@+id/ivMoviePoster"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Black Adam"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/qrcode" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivMoviePoster" />
+
+        <TextView
+            android:id="@+id/tvMovieTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Black Adam"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvMovieDateCaption"
+            app:layout_constraintStart_toEndOf="@+id/ivMoviePoster"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tvMovieDateCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Date:"
+            app:layout_constraintBottom_toTopOf="@+id/tvMovieTheaterCaption"
+            app:layout_constraintStart_toStartOf="@+id/tvMovieTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tvMovieTitle" />
+
+        <TextView
+            android:id="@+id/tvMovieSeatsCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seats:"
+            app:layout_constraintBottom_toTopOf="@+id/divider"
+            app:layout_constraintStart_toStartOf="@+id/tvMovieTheaterCaption"
+            app:layout_constraintTop_toBottomOf="@+id/tvMovieTheaterCaption" />
+
+        <TextView
+            android:id="@+id/tvMovieTheaterCaption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Theater:"
+            app:layout_constraintBottom_toTopOf="@+id/tvMovieSeatsCaption"
+            app:layout_constraintStart_toStartOf="@+id/tvMovieDateCaption"
+            app:layout_constraintTop_toBottomOf="@+id/tvMovieDateCaption" />
+
+        <TextView
+            android:id="@+id/tvMovieTheater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Tinseltown - Benton"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMovieTheaterCaption"
+            app:layout_constraintStart_toEndOf="@+id/tvMovieTheaterCaption"
+            app:layout_constraintTop_toTopOf="@+id/tvMovieTheaterCaption" />
+
+        <ImageView
+            android:id="@+id/ivSelectMovie"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_arrow_right" />
+
+        <TextView
+            android:id="@+id/tvMovieTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="8:00 PM"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMovieDate"
+            app:layout_constraintStart_toEndOf="@+id/tvMovieDate"
+            app:layout_constraintTop_toTopOf="@+id/tvMovieDate" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutParent2"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        app:layout_constraintEnd_toEndOf="@+id/layoutParent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutParent">
+
+        <TextView
+            android:id="@+id/tvMovieDate2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20211022"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMovieDateCaption2"
+            app:layout_constraintStart_toStartOf="@+id/tvMovieTheater2"
+            app:layout_constraintTop_toTopOf="@+id/tvMovieDateCaption2" />
+
+        <TextView
+            android:id="@+id/tvMovieSeats2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMovieSeatsCaption2"
+            app:layout_constraintStart_toStartOf="@+id/tvMovieTheater2"
+            app:layout_constraintTop_toTopOf="@+id/tvMovieSeatsCaption2" />
+
+        <ImageView
+            android:id="@+id/ivMoviePoster2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:contentDescription="Black Adam"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/qrcode" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivMoviePoster2" />
+
+        <TextView
+            android:id="@+id/tvMovieTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Dune"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/tvMovieDateCaption2"
+            app:layout_constraintStart_toEndOf="@+id/ivMoviePoster2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/tvMovieDateCaption2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Date:"
+            app:layout_constraintBottom_toTopOf="@+id/tvMovieTheaterCaption2"
+            app:layout_constraintStart_toStartOf="@+id/tvMovieTitle2"
+            app:layout_constraintTop_toBottomOf="@+id/tvMovieTitle2" />
+
+        <TextView
+            android:id="@+id/tvMovieSeatsCaption2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Seats:"
+            app:layout_constraintBottom_toTopOf="@+id/divider2"
+            app:layout_constraintStart_toStartOf="@+id/tvMovieTheaterCaption2"
+            app:layout_constraintTop_toBottomOf="@+id/tvMovieTheaterCaption2" />
+
+        <TextView
+            android:id="@+id/tvMovieTheaterCaption2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Theater:"
+            app:layout_constraintBottom_toTopOf="@+id/tvMovieSeatsCaption2"
+            app:layout_constraintStart_toStartOf="@+id/tvMovieDateCaption2"
+            app:layout_constraintTop_toBottomOf="@+id/tvMovieDateCaption2" />
+
+        <TextView
+            android:id="@+id/tvMovieTheater2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Movie Tavern - Little Rock"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMovieTheaterCaption2"
+            app:layout_constraintStart_toEndOf="@+id/tvMovieTheaterCaption2"
+            app:layout_constraintTop_toTopOf="@+id/tvMovieTheaterCaption2" />
+
+        <ImageView
+            android:id="@+id/ivSelectMovie2"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_arrow_right" />
+
+        <TextView
+            android:id="@+id/tvMovieTime2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="7:30 PM"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMovieDate2"
+            app:layout_constraintStart_toEndOf="@+id/tvMovieDate2"
+            app:layout_constraintTop_toTopOf="@+id/tvMovieDate2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:menu="@menu/bottom_nav_menu" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

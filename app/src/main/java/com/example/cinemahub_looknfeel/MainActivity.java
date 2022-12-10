@@ -15,6 +15,7 @@ import android.widget.Spinner;
 
 import com.example.cinemahub_looknfeel.Adapter.AdapterList;
 import com.example.cinemahub_looknfeel.Utils.DataGenerator;
+import com.example.cinemahub_looknfeel.databinding.ActivityMainPageV2Binding;
 import com.example.cinemahub_looknfeel.databinding.ActivityMovieSelectionBinding;
 import com.example.cinemahub_looknfeel.model.Movie;
 
@@ -25,7 +26,7 @@ import java.util.Objects;
 public class MainActivity extends AppCompatActivity {
 
     // Add the binder:
-    private ActivityMovieSelectionBinding binding;
+    private ActivityMainPageV2Binding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,47 +44,57 @@ public class MainActivity extends AppCompatActivity {
 //        setContentView(R.layout.activity_movie_view);
 //        setContentView(R.layout.activity_movie_view_v2);
 //        setContentView(R.layout.activity_movie_details);
-        setContentView(R.layout.activity_movie_selection);
-
-
+//        setContentView(R.layout.activity_movie_selection);
+        setContentView(R.layout.activity_main_page_v2);
 
         // TODO: link showtimes to the class on the movie details page
         // TODO: link seating to the class on the seating page
         // TODO: create the theater class using the theater selection page
         // TODO: add the seating, movie, and theater to the event class
 
-
-
 //        // Actionbar Set Up: ///////////////////////////////////////////////////////////////////////
-//
 //        // calling the action bar
 //        ActionBar actionBar = getSupportActionBar();
 //
 //        // showing the back button in action bar
 //        actionBar.setDisplayHomeAsUpEnabled(true);
-//
 //        ////////////////////////////////////////////////////////////////////////////////////////////
 
+        View btnMovies = findViewById(R.id.ibMovies);
+        btnMovies.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Set the new intent to go to the movie selection screen:
+                Intent startMovieSelection = new Intent(MainActivity.this, MovieSelectionActivity.class);
 
-        
-//        // Spinner Set Up: /////////////////////////////////////////////////////////////////////////
-//
-//        Spinner spinner = (Spinner) findViewById(R.id.seatSpinner);
-//        // Create an ArrayAdapter using the string array and a default spinner layout
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.seats_array, android.R.layout.simple_spinner_item);
-//        // Specify the layout to use when the list of choices appears
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        // Apply the adapter to the spinner
-//        spinner.setAdapter(adapter);
-//
-//        ////////////////////////////////////////////////////////////////////////////////////////////
+                // Start the new activity and send the data at the same time:
+                startActivity( startMovieSelection );
+            }
+        });
 
+        View btnTheaters = findViewById(R.id.ibTheaters);
+        btnTheaters.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Set the new intent to go to the movie selection screen:
+                Intent startTheaterSelection = new Intent(MainActivity.this, TheaterSelectionActivity.class);
 
+                // Start the new activity and send the data at the same time:
+                startActivity( startTheaterSelection );
+            }
+        });
 
+        View btnTickets = findViewById(R.id.ibTickets);
+        btnTickets.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Set the new intent to go to the movie selection screen:
+                Intent startTicketList = new Intent(MainActivity.this, TicketListActivity.class);
 
+                // Start the new activity and send the data at the same time:
+                startActivity( startTicketList );
+            }
+        });
 
     }
-
-
-
 }

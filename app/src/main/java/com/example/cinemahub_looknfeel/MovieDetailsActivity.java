@@ -1,19 +1,16 @@
 package com.example.cinemahub_looknfeel;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.CompoundButton;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.cinemahub_looknfeel.Adapter.AdapterList;
 import com.example.cinemahub_looknfeel.databinding.ActivityMovieDetailsBinding;
 import com.example.cinemahub_looknfeel.model.Event;
 import com.example.cinemahub_looknfeel.model.Movie;
+import com.example.cinemahub_looknfeel.model.Theater;
 import com.google.android.material.chip.Chip;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
@@ -27,7 +24,6 @@ public class MovieDetailsActivity extends AppCompatActivity {
     private ActivityMovieDetailsBinding binding;
 
     public static final String EXTRA_MOVIE = "MovieData";
-    public static final String EXTRA_MOVIE_SHOWTIMES = "ShowTimesData";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -110,29 +106,25 @@ public class MovieDetailsActivity extends AppCompatActivity {
 
     //private void onSelectSeatBtnClicked(View v, Movie movie, AdapterList mAdapter ) {
     private void onSelectSeatBtnClicked(View v, Movie movie ) {
-//        if(binding.chpGroup.getCheckedChipId() == -1) {
-//            binding.chpGroup.requestFocus();
-//            binding.chpGroup.setBackgroundColor(Color.parseColor("#FF7F7F"));
-//        }
-//        else {
-            // Create the intent:
-            Intent intent = new Intent(this, MovieSeatingChartActivity.class);
+        // Create the intent to pass to the Movie Seating Chart Activity:
+        Intent intent = new Intent(this, MovieSeatingChartActivity.class);
 
-            // Create the event class and add the movie and showtime to it:
-            //Event event = new Event(movie, ((Chip) binding.chpGroup.getChildAt((int)binding.chpGroup.getCheckedChipId() - 1)).getText().toString());
-            Event event = new Event(movie);
+        // Create the event class:
+        Event event = new Event(movie);
 
-//            Bundle bundle = new Bundle();
-//            bundle.putParcelable(EXTRA_MOVIE, event);
-//            bundle.putParcelable(EXTRA_MOVIE_SHOWTIMES, movie.getShowTimes());
-//            intent.putExtras(bundle);
+        // Add the movie Theater:
+        // TODO: This is hardcoded and needs to be pulled from the theater selection screen instead
+        Theater theater = new Theater();
+        theater.setAddress("123 main street");
+        theater.setName("Taco Bell");
+        theater.setPhone("18005518900");
+        event.setTheater(theater);
 
-            // Set the intent to pass the event object:
-            intent.putExtra(EXTRA_MOVIE, event);
+        // Set the intent to pass the event object:
+        intent.putExtra(EXTRA_MOVIE, event);
 
-            // Start the new activity and send the data at the same time:
-            startActivity(intent);
-//        }
+        // Start the new activity and send the data at the same time:
+        startActivity(intent);
     }
 
 }
