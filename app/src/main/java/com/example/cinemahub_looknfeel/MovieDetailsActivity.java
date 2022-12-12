@@ -36,7 +36,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
     }
 
     private void initComponent() {
-        Movie movieReceiving = getIntent().getParcelableExtra(MovieSelectionActivity.EXTRA_MOVIE);
+        Movie movieReceiving = getIntent().getParcelableExtra(EXTRA_MOVIE);
 
         binding.tvTitle.setText(movieReceiving.getTitle());
         binding.tvDate.setText(movieReceiving.getDate());

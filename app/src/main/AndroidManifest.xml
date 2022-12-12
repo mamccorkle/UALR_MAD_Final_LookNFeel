@@ -33,10 +33,10 @@
             android:name="com.google.android.geo.API_KEY"
             android:value="YOUR_API_KEY" />
 
-        <activity
-            android:name=".fragment.MapsActivity"
-            android:exported="false"
-            android:label="@string/title_activity_maps" />
+<!--        <activity-->
+<!--            android:name=".fragment.MapsActivity"-->
+<!--            android:exported="false"-->
+<!--            android:label="@string/title_activity_maps" />-->
         <!-- &lt;!&ndash; Login Testing: &ndash;&gt; -->
         <!-- <activity -->
         <!-- android:name=".LoginActivity" -->
@@ -100,6 +100,39 @@
             android:name=".OrderSummaryActivity"
             android:exported="true"
             android:parentActivityName=".MovieSeatingChartActivity">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".PaymentMethodActivity"
+            android:exported="true"
+            android:parentActivityName=".OrderSummaryActivity">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".PaymentActivity"
+            android:exported="true"
+            android:parentActivityName=".PaymentMethodActivity">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".TicketViewActivity"
+            android:exported="true"
+            android:parentActivityName=".OrderSummaryActivity">
             <intent-filter>
                 <action
                     android:name="android.intent.action.MAIN" />

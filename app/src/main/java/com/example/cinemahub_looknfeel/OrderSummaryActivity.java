@@ -1,5 +1,6 @@
 package com.example.cinemahub_looknfeel;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -18,6 +19,9 @@ public class OrderSummaryActivity extends AppCompatActivity {
     private ActivityOrderSummaryBinding binding;
 
     private Double ticketPrice = 5.00;
+
+    // Intents variable:
+    public static final String EXTRA_MOVIE = "MovieData";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,18 +77,36 @@ public class OrderSummaryActivity extends AppCompatActivity {
         binding.btnBuyNow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onBuyNowBtnClick();
+                onBuyNowBtnClick(eventReceiving);
             }
         });
 
         calculateCost(eventReceiving);
     }
 
-    private void onBuyNowBtnClick() {
+    private void onBuyNowBtnClick(Event e) {
         // TODO: Implement the buy now button by passing the events data to the ticket screen to generate the qr code:
         // Create the Snackbar to be displayed to the user:
         Snackbar snackbar = Snackbar.make(binding.getRoot(), "Not implemented yet...", Snackbar.LENGTH_SHORT);
         snackbar.show();
+
+//        // Create the intent to pass to the Movie Seating Chart Activity:
+//        Intent toQRCodeIntent = new Intent(this, TicketViewActivity.class);
+//
+//        // Set the intent to pass the event object:
+//        toQRCodeIntent.putExtra( EXTRA_MOVIE, e );
+//
+//        // Start the new activity and send the data at the same time:
+//        startActivity(toQRCodeIntent);
+
+        // Create the intent to pass to the Movie Seating Chart Activity:
+        Intent toPaymentMethodIntent = new Intent(this, PaymentMethodActivity.class);
+
+        // Set the intent to pass the event object:
+        toPaymentMethodIntent.putExtra( EXTRA_MOVIE, e );
+
+        // Start the new activity and send the data at the same time:
+        startActivity(toPaymentMethodIntent);
     }
 
     private void calculateCost(Event e) {

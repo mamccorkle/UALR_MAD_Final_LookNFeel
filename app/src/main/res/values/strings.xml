@@ -35,4 +35,10 @@
     <string name="h_handicap">H - Handicap</string>
     <string name="please_select_the_desired_seat">Please select the desired seat</string>
     <string name="title_activity_maps">MapsActivity</string>
+
+    <!-- Ticket View -->
+    <!-- "@strings/moviedetails_????" -->
+    <string name="qr_code">qr_code</string>
+    <string name="digital_ticket">Digital Ticket</string>
+    <string name="please_display_this_ticket_upon_arrival">Please display this ticket upon arrival</string>
 </resources>

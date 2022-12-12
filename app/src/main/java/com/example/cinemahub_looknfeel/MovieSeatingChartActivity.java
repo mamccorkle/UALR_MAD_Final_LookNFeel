@@ -28,7 +28,7 @@ public class MovieSeatingChartActivity extends AppCompatActivity {
     public String showTime = "";
 
     // Global for the intents below:
-    public static final String EXTRA_MOVIE = "EventFromSeating";
+    public static final String EXTRA_MOVIE = "MovieData";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
