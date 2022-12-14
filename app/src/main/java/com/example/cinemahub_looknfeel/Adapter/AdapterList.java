@@ -116,9 +116,9 @@ public class AdapterList extends RecyclerView.Adapter
         public ImageView     ivMoviePoster;
         public TextView      tvMovieTitle;
         public TextView      tvMovieRating;
+        public RatingBar     tvMovieScore;
         public TextView      tvMovieReleaseDate;
         public TextView      tvMovieGenre;
-        public RatingBar     tvMovieScore;
         public View          layoutParent;
 
         // ViewHolder Constructor:
@@ -127,9 +127,9 @@ public class AdapterList extends RecyclerView.Adapter
             ivMoviePoster         = v.findViewById(R.id.ivMoviePoster);
             tvMovieTitle          = v.findViewById(R.id.tvMovieTitle);
             tvMovieRating         = v.findViewById(R.id.tvMovieRating);
+            tvMovieScore          = v.findViewById(R.id.ratingBar);
             tvMovieReleaseDate    = v.findViewById(R.id.tvMovieReleaseDate);
             tvMovieGenre          = v.findViewById(R.id.tvMovieGenre);
-            tvMovieScore          = v.findViewById(R.id.ratingBar);
             layoutParent          = v.findViewById(R.id.layoutParent);
 
             // On-Click Listener for the parent/root component of the activity:
