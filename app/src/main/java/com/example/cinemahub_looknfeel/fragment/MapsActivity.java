@@ -1,5 +1,6 @@
 package com.example.cinemahub_looknfeel.fragment;
 
+import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
@@ -22,40 +23,51 @@ import android.content.pm.PackageManager;
 import androidx.core.content.ContextCompat;
 
 import com.example.cinemahub_looknfeel.databinding.ActivityMapsBinding;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
-public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleMap.OnMyLocationButtonClickListener, GoogleMap.OnMyLocationClickListener {
+public class MapsActivity extends FragmentActivity implements
+        GoogleMap.OnMyLocationButtonClickListener,
+        GoogleMap.OnMyLocationClickListener,
+        OnMapReadyCallback,
+        ActivityCompat.OnRequestPermissionsResultCallback {
 
+    /**
+     * Request code for location permission request.
+     *
+     * @see #onRequestPermissionsResult(int, String[], int[])
+     */
     private static final int LOCATION_PERMISSION_REQUEST_CODE = 1;
 
+    /**
+     * Flag indicating whether a requested permission has been denied after returning in {@link
+     * #onRequestPermissionsResult(int, String[], int[])}.
+     */
     private boolean permissionDenied = false;
 
-    private GoogleMap mMap;
-    private ActivityMapsBinding binding;
+    private GoogleMap map;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_maps);
 
-        binding = ActivityMapsBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.map);
+        SupportMapFragment mapFragment =
+                (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
     }
 
-    @SuppressLint("MissingPermission")
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
-        // TODO: Before enabling the My Location layer, you must request location permission from the user
-        mMap = googleMap;
-        mMap.setMyLocationEnabled(true);
-        mMap.setOnMyLocationButtonClickListener(this);
-        mMap.setOnMyLocationClickListener(this);
+        map = googleMap;
+        map.setOnMyLocationButtonClickListener(this);
+        map.setOnMyLocationClickListener(this);
         enableMyLocation();
     }
 
+    /**
+     * Enables the My Location layer if the fine location permission has been granted.
+     */
     @SuppressLint("MissingPermission")
     private void enableMyLocation() {
         // 1. Check if permissions are granted, if so, enable the my location layer
@@ -63,7 +75,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 == PackageManager.PERMISSION_GRANTED
                 || ContextCompat.checkSelfPermission(this, permission.ACCESS_COARSE_LOCATION)
                 == PackageManager.PERMISSION_GRANTED) {
-            mMap.setMyLocationEnabled(true);
+            map.setMyLocationEnabled(true);
             return;
         }
 
@@ -73,8 +85,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public boolean onMyLocationButtonClick() {
-        Toast.makeText(this, "MyLocation button clicked", Toast.LENGTH_SHORT)
-                .show();
+        Toast.makeText(this, "MyLocation button clicked", Toast.LENGTH_SHORT).show();
         // Return false so that we don't consume the event and the default behavior still occurs
         // (the camera animates to the user's current position).
         return false;
@@ -82,9 +93,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onMyLocationClick(@NonNull Location location) {
-        Toast.makeText(this, "Current location:\n" + location, Toast.LENGTH_LONG)
-                .show();
+        Toast.makeText(this, "Current location:\n" + location, Toast.LENGTH_LONG).show();
     }
+
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
@@ -105,6 +116,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             permissionDenied = true;
         }
     }
+
     @Override
     protected void onResumeFragments() {
         super.onResumeFragments();
@@ -114,6 +126,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
             permissionDenied = false;
         }
     }
+
     /**
      * Displays a dialog with error message explaining that the location permission is missing.
      */
@@ -121,4 +134,5 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         PermissionUtils.PermissionDeniedDialog
                 .newInstance(true).show(getSupportFragmentManager(), "dialog");
     }
+
 }

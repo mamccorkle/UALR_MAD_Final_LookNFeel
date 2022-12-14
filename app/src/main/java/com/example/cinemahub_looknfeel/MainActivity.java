@@ -1,11 +1,17 @@
 package com.example.cinemahub_looknfeel;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -16,7 +22,7 @@ import android.widget.Spinner;
 import com.example.cinemahub_looknfeel.Adapter.AdapterList;
 import com.example.cinemahub_looknfeel.Utils.DataGenerator;
 import com.example.cinemahub_looknfeel.databinding.ActivityMovieSelectionBinding;
-import com.example.cinemahub_looknfeel.model.Movie;
+import com.google.android.gms.maps.SupportMapFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,15 +34,17 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMovieSelectionBinding binding;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // Set the layout file as the content view.
+        setContentView(R.layout.activity_maps);
+
 //        setContentView(R.layout.acitvity_register);
 //        setContentView(R.layout.activity_login);
 //        setContentView(R.layout.activity_theater_selection);
 //        setContentView(R.layout.activity_theater_selection_v2);
 //        setContentView(R.layout.activity_payment);
 //        setContentView(R.layout.activity_seating_chart);
-//        setContentView(R.layout.activity_main_page);
 //        setContentView(R.layout.activity_main_page_v2);
 //        setContentView(R.layout.activity_seating_chart_v2);
 //        setContentView(R.layout.activity_seating_chart_v3);
@@ -45,15 +53,15 @@ public class MainActivity extends AppCompatActivity {
 //        setContentView(R.layout.activity_movie_details);
         setContentView(R.layout.activity_movie_selection);
 
-
+//      Sets a handle and callback to the map fragment
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
 
         // TODO: link showtimes to the class on the movie details page
         // TODO: link seating to the class on the seating page
         // TODO: create the theater class using the theater selection page
         // TODO: add the seating, movie, and theater to the event class
-
-
-
 //        // Actionbar Set Up: ///////////////////////////////////////////////////////////////////////
 //
 //        // calling the action bar
@@ -63,9 +71,6 @@ public class MainActivity extends AppCompatActivity {
 //        actionBar.setDisplayHomeAsUpEnabled(true);
 //
 //        ////////////////////////////////////////////////////////////////////////////////////////////
-
-
-        
 //        // Spinner Set Up: /////////////////////////////////////////////////////////////////////////
 //
 //        Spinner spinner = (Spinner) findViewById(R.id.seatSpinner);
@@ -77,13 +82,5 @@ public class MainActivity extends AppCompatActivity {
 //        spinner.setAdapter(adapter);
 //
 //        ////////////////////////////////////////////////////////////////////////////////////////////
-
-
-
-
-
     }
-
-
-
 }
