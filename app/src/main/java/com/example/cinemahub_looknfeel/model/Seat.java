@@ -53,6 +53,14 @@ public class Seat implements Parcelable {
     // Getters:
     public Boolean getHandicap() { return handicap; }
     public Boolean getReclinable() { return reclinable; }
+    public String  getOptions() {
+        if(handicap)
+            return "handicap";
+        else if(reclinable)
+            return "reclinable";
+        else
+            return "";
+    }
     public int getId() { return id; }
 
     // Setters:

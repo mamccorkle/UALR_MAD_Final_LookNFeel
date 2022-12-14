@@ -51,4 +51,8 @@ dependencies {
     implementation 'com.pierfrancescosoffritti.androidyoutubeplayer:core:11.1.0'
     // jsoup HTML parser library @ https://jsoup.org/
     implementation 'org.jsoup:jsoup:1.15.3'
+
+    // QR Code Generator:
+    implementation 'com.github.androidmads:QRGenerator:1.0.1'
+    implementation 'com.google.zxing:core:3.5.0'
 }

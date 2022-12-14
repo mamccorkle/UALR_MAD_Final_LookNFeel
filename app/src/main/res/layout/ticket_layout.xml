@@ -1,47 +1,173 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:id="@+id/lyt_parent_ticket"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutParent"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/item_background"
-    android:layout_marginVertical="10dp"
-    android:orientation="horizontal">
+    android:layout_height="135dp">
+
+    <TextView
+        android:id="@+id/tvMovieRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="20221207"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMovieRatingCaption"
+        app:layout_constraintStart_toStartOf="@+id/tvMovieGenre"
+        app:layout_constraintTop_toTopOf="@+id/tvMovieRatingCaption" />
+
+    <TextView
+        android:id="@+id/tvMovieReleaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMovieReleaseDateCaption"
+        app:layout_constraintTop_toTopOf="@+id/tvMovieReleaseDateCaption"
+        tools:layout_editor_absoluteX="200dp" />
 
     <ImageView
-        android:id="@+id/ticket_image"
+        android:id="@+id/ivMoviePoster"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:background="@drawable/ic_dashboard_black_24dp"/>
+        android:layout_marginStart="@dimen/s16dp"
+        android:contentDescription="@string/movie_title_caps"
+        android:scaleType="centerInside"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/qrcode" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_marginLeft="50dp"
-        android:layout_gravity="right">
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/movieview_divider_height"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivMoviePoster" />
+
     <TextView
-        android:id="@+id/ticket_title"
-        android:layout_width="match_parent"
+        android:id="@+id/tvMovieTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="text"/>
-
-        <TextView
-        android:id="@+id/ticket_theater"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="text"/>
+        android:layout_marginStart="@dimen/s16dp"
+        android:text="Black Adam"
+        android:textSize="@dimen/movieview_title_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/tvMovieRatingCaption"
+        app:layout_constraintStart_toEndOf="@+id/ivMoviePoster"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
 
     <TextView
-        android:id="@+id/ticket_time"
-        android:layout_width="match_parent"
+        android:id="@+id/tvMovieRatingCaption"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="text"/>
+        android:layout_marginTop="@dimen/s8dp"
+        android:text="Date:"
+        app:layout_constraintBottom_toTopOf="@+id/tvMovieGenreCaption"
+        app:layout_constraintStart_toStartOf="@+id/tvMovieTitle"
+        app:layout_constraintTop_toBottomOf="@+id/tvMovieTitle" />
 
-        <TextView
-        android:id="@+id/ticket_number"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tvMovieReleaseDateCaption"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="text"/>
-    </LinearLayout>
-</LinearLayout>
+        android:text="Seats:"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintStart_toStartOf="@+id/tvMovieGenreCaption"
+        app:layout_constraintTop_toBottomOf="@+id/tvMovieGenreCaption" />
+
+    <TextView
+        android:id="@+id/tvMovieGenreCaption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Theater:"
+        app:layout_constraintBottom_toTopOf="@+id/tvMovieReleaseDateCaption"
+        app:layout_constraintStart_toStartOf="@+id/tvMovieRatingCaption"
+        app:layout_constraintTop_toBottomOf="@+id/tvMovieRatingCaption" />
+
+    <TextView
+        android:id="@+id/tvMovieGenre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/s16dp"
+        android:text="Tinseltown - Benton"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMovieGenreCaption"
+        app:layout_constraintStart_toEndOf="@+id/tvMovieGenreCaption"
+        app:layout_constraintTop_toTopOf="@+id/tvMovieGenreCaption" />
+
+    <ImageView
+        android:id="@+id/ivSelectMovie"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_arrow_right" />
+
+    <TextView
+        android:id="@+id/tvMovieTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="8:00 PM"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMovieRating"
+        app:layout_constraintStart_toEndOf="@+id/tvMovieRating"
+        app:layout_constraintTop_toTopOf="@+id/tvMovieRating" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<LinearLayout-->
+<!--    android:id="@+id/lyt_parent_ticket"-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:background="@color/item_background"-->
+<!--    android:layout_marginVertical="10dp"-->
+<!--    android:orientation="horizontal">-->
+
+<!--    <ImageView-->
+<!--        android:id="@+id/ticket_image"-->
+<!--        android:layout_width="100dp"-->
+<!--        android:layout_height="100dp"-->
+<!--        android:background="@drawable/ic_dashboard_black_24dp"/>-->
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_marginLeft="50dp"-->
+<!--        android:layout_gravity="right">-->
+<!--    <TextView-->
+<!--        android:id="@+id/ticket_title"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="text"/>-->
+
+<!--        <TextView-->
+<!--        android:id="@+id/ticket_theater"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="text"/>-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/ticket_time"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="text"/>-->
+
+<!--        <TextView-->
+<!--        android:id="@+id/ticket_number"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="text"/>-->
+<!--    </LinearLayout>-->
+<!--</LinearLayout>-->

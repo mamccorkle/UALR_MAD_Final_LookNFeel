@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewBuyNow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+
+        android:paddingTop="8dp"
+
+        android:paddingBottom="8dp"
+        app:cardCornerRadius="4dp"
+        app:cardElevation="4dp"
+        app:contentPadding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="8dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="8dp"
+            android:paddingBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvMovieShowtimeCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Showtime:"
+                app:layout_constraintStart_toStartOf="@+id/tvMovieNumberOfSeatsCaption"
+                app:layout_constraintTop_toBottomOf="@+id/tvMovieNumberOfSeats" />
+
+            <TextView
+                android:id="@+id/tvMovieShowtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:text="SHOWTIME"
+                app:layout_constraintStart_toStartOf="@+id/tvMovieShowtimeCaption"
+                app:layout_constraintTop_toBottomOf="@+id/tvMovieShowtimeCaption" />
+
+            <ImageView
+                android:id="@+id/ivMoviePoster"
+                android:layout_width="118dp"
+                android:layout_height="175dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:contentDescription="movie_title_caps"
+                android:scaleType="fitCenter"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/icon_generic_movie_poster" />
+
+            <TextView
+                android:id="@+id/tvMovieTheaterCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Theater:"
+                app:layout_constraintStart_toEndOf="@+id/ivMoviePoster"
+                app:layout_constraintTop_toBottomOf="@+id/tvMovieTitle" />
+
+            <TextView
+                android:id="@+id/tvMovieNumberOfSeatsCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="Seating Options:"
+                app:layout_constraintStart_toEndOf="@+id/ivMoviePoster"
+                app:layout_constraintTop_toBottomOf="@+id/tvMovieTheater" />
+
+            <TextView
+                android:id="@+id/tvMovieNumberOfSeats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:text="NUMBER OF SEATS"
+                app:layout_constraintStart_toStartOf="@+id/tvMovieNumberOfSeatsCaption"
+                app:layout_constraintTop_toBottomOf="@+id/tvMovieNumberOfSeatsCaption" />
+
+            <TextView
+                android:id="@+id/tvMovieCost"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$ COST"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="300dp"
+                tools:layout_editor_absoluteY="16dp" />
+
+            <TextView
+                android:id="@+id/tvMovieCostCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cost:"
+                android:visibility="invisible"
+                tools:layout_editor_absoluteX="268dp"
+                tools:layout_editor_absoluteY="17dp" />
+
+            <TextView
+                android:id="@+id/tvMovieTheater"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="8dp"
+                android:text="THEATER"
+                app:layout_constraintStart_toStartOf="@+id/tvMovieTheaterCaption"
+                app:layout_constraintTop_toBottomOf="@+id/tvMovieTheaterCaption" />
+
+            <TextView
+                android:id="@+id/tvMovieTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="MOVIE TITLE"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/ivMoviePoster"
+                app:layout_constraintTop_toTopOf="@+id/ivMoviePoster" />
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="8dp"
+                android:background="?android:attr/listDivider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivMoviePoster" />
+
+            <TextView
+                android:id="@+id/tvPurchaseSummary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Purchase Summary:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+            <EditText
+                android:id="@+id/mltItemizedList"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:gravity="start|top"
+                android:inputType="textMultiLine"
+                android:text="Matinee\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t$8.00\nMatinee\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t$8.00\nPopcorn (Large)\t\t\t\t\t\t\t\t\t\t\t$5.00\nSoda\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t$3.50\nSoda\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t$3.50"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tvPurchaseSummary"
+                app:layout_constraintTop_toBottomOf="@+id/tvPurchaseSummary" />
+
+            <TextView
+                android:id="@+id/tvTotalCaption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Total:"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/mltItemizedList"
+                app:layout_constraintTop_toBottomOf="@+id/mltItemizedList" />
+
+            <TextView
+                android:id="@+id/tvTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="$ 28.00"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tvTotalCaption" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/btnBuyNow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Buy Now"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
